@@ -1,6 +1,7 @@
 <template>
 <div>
-  <span>welcome to vue.js app</span>
+  <h3>Добро пожаловать на страницу проекта {{projectname}}</h3>
+  <p>IP сервера:{{ip}}</p>
 </div>
 </template>
 
@@ -9,5 +10,11 @@
 
 export default {
   name: "Home",
+  data(){
+    return {
+      projectname:"rmcj-mc",
+      ip:"rs1.rmcj.ru:25565"
+    }
+  }
 };
 </script>

@@ -15,6 +15,11 @@ const routes = [
     path:"/donate",
     name:"Donate",
     component: () => import(/* webpackChunkName: "donate" */"@/views/Donate.vue")
+  },
+  {
+    path:"/donate/:id",
+    name:"donate",
+    component: () => import(/* webpackChunkName: "donate_full" */"@/components/DonateFull.vue")
   }
 ];
 
