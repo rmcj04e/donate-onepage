@@ -2,7 +2,7 @@
 <div>
     <p>Донатики</p>
       <ul v-for="name in groups" :key="name.id">
-          <li>{{name}}</li>
+          <li>Группа:{{name}}</li>
       </ul>
 </div>
 </template>
