@@ -19,7 +19,7 @@ export default{
     },
     mounted(){
     axios
-         .get("http://vma.vovanmines.ru/scripts/handlers/REST.php?action=get_group_data")
+         .get("http://vma.vovanmines.ru/scripts/handlers/REST.php?action=get_group_data&group="+this.group)
          .then((response) => {
              console.log(response)
              this.desc = response.data.desc

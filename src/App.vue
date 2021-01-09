@@ -8,6 +8,7 @@
               <b-navbar-nav>
         <b-nav-item to="/">Главная</b-nav-item>        
         <b-nav-item to="/donate">Привелегии</b-nav-item>
+        <b-nav-item to="/rules">Правила</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
       </b-navbar> 

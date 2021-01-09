@@ -20,6 +20,11 @@ const routes = [
     path:"/donate/:id",
     name:"donate",
     component: () => import(/* webpackChunkName: "donate_full" */"@/components/DonateFull.vue")
+  },
+  {
+    path:"/rules",
+    name:"rules",
+    component:() => import(/* webpackChunkName: "rules" */"@/views/Rules.vue")
   }
 ];
 
