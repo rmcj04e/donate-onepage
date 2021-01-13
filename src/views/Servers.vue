@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import axios from `axios`
+import axios from 'axios'
 export default{
     name:"Servers",
     data(){
@@ -35,7 +35,7 @@ export default{
     },
     mounted(){
       axios
-        .get("/api/rest.api?action=get_servers")
+        .get("/api/rest.php?action=get_servers")
         .then((response) => {
             this.servers = response.data
         })

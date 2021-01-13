@@ -12,9 +12,14 @@ const routes = [
     component: Home
   },
   {
-    path:"/donate",
-    name:"Donate",
+    path:"/donates/:server",
+    name:"Donates",
     component: () => import(/* webpackChunkName: "donate" */"@/views/Donate.vue")
+  },
+  {
+    path:"/servers",
+    name:"Servers",
+    component: () => import(/* webpackChunkName: "donate" */"@/views/Servers.vue")
   },
   {
     path:"/donate/:id",

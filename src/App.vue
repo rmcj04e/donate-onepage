@@ -7,7 +7,7 @@
          <b-collapse id="nav-text-collapse" is-nav>
               <b-navbar-nav>
         <b-nav-item to="/">Главная</b-nav-item>        
-        <b-nav-item to="/donate">Привелегии</b-nav-item>
+        <b-nav-item to="/servers">Привелегии</b-nav-item>
         <b-nav-item to="/rules">Правила</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
