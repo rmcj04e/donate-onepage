@@ -14,7 +14,7 @@
     class="mb-2"
   >
     <b-card-text>
-      Здесь когда-то было описание привелегии,но его спиздили цыгане
+      Здесь когда-то было описание привелегии,но его украли цыгане
     </b-card-text>
 
     <router-link :to="{ name: 'donate', params:{ id:group } }"><b-button variant="primary">Подробнее</b-button></router-link>
@@ -37,7 +37,7 @@ export default{
     },
     mounted(){
       axios
-        .get("http://vma.vovanmines.ru/scripts/handlers/REST.php")
+        .get("/api/rest.php")
         .then((response) => {
             this.groups = response.data.groups
         });

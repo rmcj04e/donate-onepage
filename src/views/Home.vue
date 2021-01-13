@@ -13,7 +13,7 @@ export default {
   data(){
     return {
       projectname:"rmcj-mc",
-      ip:"rs1.rmcj.ru:25565"
+      ip:"rs1.rmcj.ru:43005"
     }
   }
 };
