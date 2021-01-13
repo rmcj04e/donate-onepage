@@ -13,8 +13,8 @@ const routes = [
   },
   {
     path:"/donates/:server",
-    name:"Donates",
-    component: () => import(/* webpackChunkName: "donate" */"@/views/Donate.vue")
+    name:"donates",
+    component: () => import(/* webpackChunkName: "donate_by_server" */"@/views/Donate.vue")
   },
   {
     path:"/servers",

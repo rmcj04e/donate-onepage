@@ -5,7 +5,7 @@
 <div v-for="group in groups" :key="group.id">
     <b-col>
 <b-card bg-variant="dark" text-variant="white"
-    :title="group"
+    :title="group.name"
     img-src="https://picsum.photos/600/300/?image=25"
     img-alt="Image"
     img-top
@@ -14,10 +14,10 @@
     class="mb-2"
   >
     <b-card-text>
-      Здесь когда-то было описание привелегии,но его украли цыгане
+      {{group.desc}}
     </b-card-text>
 
-    <router-link :to="{ name: 'donate', params:{ id:group } }"><b-button variant="primary">Подробнее</b-button></router-link>
+    <router-link :to="{ name: 'donate', params:{ id:group.name } }"><b-button variant="primary">Подробнее</b-button></router-link>
   </b-card>
     </b-col>
           </div>
@@ -33,13 +33,15 @@ export default{
     data(){
         return{
             groups:[],
+            server: this.$route.params.server
         }
     },
     mounted(){
       axios
-        .get("/api/rest.php")
+        .get("/api/rest.php?action=get_donates_by_server&server="+this.server)
         .then((response) => {
-            this.groups = response.data.groups
+            this.groups = response.data
+            console.log(response)
         });
     }
 }

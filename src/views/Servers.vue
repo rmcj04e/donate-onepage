@@ -16,7 +16,7 @@
       {{server.desc}}
     </b-card-text>
 
-    <router-link :to="{ name: 'donlist', params:{ id:server.name } }"><b-button variant="primary">Список донатов</b-button></router-link>
+    <router-link :to="{ name: 'donates', params:{ server:server.name } }"><b-button variant="primary">Список донатов</b-button></router-link>
   </b-card>
     </b-col>
           </div>
