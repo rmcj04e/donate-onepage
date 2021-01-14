@@ -43,6 +43,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+NProgress.configure({ easing: 'ease', speed: 500 });
 router.beforeEach((to, from, next) => {
   NProgress.start();
   next();
