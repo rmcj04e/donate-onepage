@@ -12,24 +12,29 @@ const routes = [
     component: Home
   },
   {
-    path:"/donates/:server",
-    name:"donates",
-    component: () => import(/* webpackChunkName: "donate_by_server" */"@/views/Donate.vue")
+    path: "/donates/:server",
+    name: "donates",
+    component: () =>
+      import(/* webpackChunkName: "donate_by_server" */ "@/views/Donate.vue")
   },
   {
-    path:"/servers",
-    name:"Servers",
-    component: () => import(/* webpackChunkName: "donate" */"@/views/Servers.vue")
+    path: "/servers",
+    name: "Servers",
+    component: () =>
+      import(/* webpackChunkName: "donate" */ "@/views/Servers.vue")
   },
   {
-    path:"/donate/:id",
-    name:"donate",
-    component: () => import(/* webpackChunkName: "donate_full" */"@/components/DonateFull.vue")
+    path: "/donate/:id",
+    name: "donate",
+    component: () =>
+      import(
+        /* webpackChunkName: "donate_full" */ "@/components/DonateFull.vue"
+      )
   },
   {
-    path:"/rules",
-    name:"rules",
-    component:() => import(/* webpackChunkName: "rules" */"@/views/Rules.vue")
+    path: "/rules",
+    name: "rules",
+    component: () => import(/* webpackChunkName: "rules" */ "@/views/Rules.vue")
   }
 ];
 
@@ -38,11 +43,11 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
-router.beforeEach((to,from,next) => {
-  NProgress.start()
-  next()
-})
+router.beforeEach((to, from, next) => {
+  NProgress.start();
+  next();
+});
 router.afterEach(() => {
-  NProgress.done()  
-})
+  NProgress.done();
+});
 export default router;

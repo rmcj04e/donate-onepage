@@ -1,8 +1,8 @@
 <template>
-<div>
-  <h3>Добро пожаловать на страницу проекта {{projectname}}</h3>
-  <p>IP сервера:{{ip}}</p>
-</div>
+  <div>
+    <h3>Добро пожаловать на страницу проекта {{ projectname }}</h3>
+    <p>IP сервера:{{ ip }}</p>
+  </div>
 </template>
 
 <script>
@@ -10,11 +10,11 @@
 
 export default {
   name: "Home",
-  data(){
+  data() {
     return {
-      projectname:"rmcj-mc",
-      ip:"rs1.rmcj.ru:43005"
-    }
+      projectname: "rmcj-mc",
+      ip: "rs1.rmcj.ru:43005"
+    };
   }
 };
 </script>
