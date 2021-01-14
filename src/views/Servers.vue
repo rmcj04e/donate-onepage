@@ -41,6 +41,9 @@ export default{
         })
         .catch(() => {
             console.log("An error has happened")
+            this.$toasted.error('Не удалось получить список серверов :c',{
+              duration:2000,keepOnHover:true,theme:'toasted-primary'
+            })
         })
     }
 }

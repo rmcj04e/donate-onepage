@@ -42,7 +42,12 @@ export default{
         .then((response) => {
             this.groups = response.data
             console.log(response)
-        });
+        })
+        .catch(() => {
+          this.$toasted.error('Не удалось получить список привелегий :c',{
+              duration:2000,keepOnHover:true,theme:'toasted-primary'
+            })
+        })
     }
 }
 </script>
